@@ -471,7 +471,8 @@ public class TelephonyProvider extends ContentProvider
     public Cursor query(Uri url, String[] projectionIn, String selection,
             String[] selectionArgs, String sort) {
 
-        checkPermission();
+	// workaround for spmode mail
+        //checkPermission();
 
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables("carriers");
